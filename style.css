@@ -1,0 +1,373 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600&display=swap');
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            height: 100%;
+        }
+
+        body {
+            font-family: 'Nunito', serif;
+            height: 100%;
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 50px;
+            width: 100%;
+            max-width: 1200px; /* Define uma largura máxima para o nav */
+            margin: 0 auto; /* Centraliza o nav dentro do .center */
+        }
+
+        nav ul {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            list-style: none;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #5a5a5a;
+        }
+
+        nav ul li a.active {
+            color: #5a5a5a;
+        }
+
+        .logo {
+            font-size: 18px;
+            color: white;
+            font-weight: 600;
+            text-transform: uppercase;
+            margin-right: auto; /* Garante que o logo fique alinhado à esquerda */
+        }
+
+        .nav-menu {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+        }
+
+        /* Estiliza o contêiner centralizado do menu */
+        .center {
+            width: 100%;
+            height: 80px;
+            margin: 0 auto;
+            background-color: #202020;
+            display: flex;
+            justify-content: center; /* Centraliza o conteúdo horizontalmente */
+            align-items: center; /* Alinha verticalmente */
+        }
+
+        /* Estiliza o botão de menu */
+        .checkbtn {
+            font-size: 30px;
+            color: white;
+            float: right;
+            line-height: 80px;
+            margin-right: 40px;
+            cursor: pointer;
+        }
+
+        /* Inicialmente oculta o ícone de fechar do menu */
+        #closeIcon {
+            display: none;
+        }
+
+        /* Mostra e oculta os ícones do menu com base no estado do checkbox */
+        #check:checked ~ .checkbtn #menuIcon {
+            display: none; /* Oculta o ícone de "hamburguer" quando o menu está aberto */
+        }
+        
+        #check:checked ~ .checkbtn #closeIcon {
+            display: inline; /* Exibe o ícone de "X" quando o menu está aberto */
+        }
+
+        /* Oculta o checkbox do menu */
+        #check {
+            display: none;
+        }
+
+
+        /* seção INICIO */
+
+
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh; /* Preenche toda a altura da tela */
+            text-align: center;
+            padding: 0 20px;
+            background-image: url('images/imagem\ de\ fundo.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            position: relative;
+        }
+
+        .container::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5); /* cor preta com 50% de opacidade */
+            z-index: 1;
+        }
+        
+        .apresentacao {
+            position: relative;
+            z-index: 2; /* Coloca o conteúdo acima da camada transparente */
+            max-width: 800px; /* Limita a largura do conteúdo */
+        }
+        
+        .apresentacao h2 {
+            color: #fff;
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+        
+        .apresentacao hr {
+            width: 50%;
+            margin: 20px auto;
+            border: 1px solid #ccc;
+        }
+        
+        .apresentacao h4 {
+            color: #ccc;
+            font-size: 1.2em;
+            margin-bottom: 30px;
+        }
+        
+        .botao {
+            display: inline-block;
+            padding: 15px 30px;
+            background-color: #202020;
+            color: #fff;
+            text-decoration: none;
+            font-size: 1em;
+            border-radius: 50px;
+            transition: background-color 0.3s;
+        }
+        
+        .botao:hover {
+            background-color: #5a5a5a;
+        }
+
+
+        /* fim seção INICIO */
+
+
+        /* Seção "Quem Somos" */
+        #quem-somos {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            height: 60%;
+            padding: 100px 80px;
+        }
+
+        .center-quem-somos {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-direction: column;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .box-quem-somos{
+            width: 100%;
+            height: 60%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .texto {
+            max-width: 600px;
+        }
+
+        .nome-advogado {
+            font-size: 18px; /* Tamanho de fonte menor */
+            font-weight: 600;
+            color: #6e6e6e;
+            margin-bottom: 20px;
+        }
+
+        .descricao-advogado {
+            font-size: 35px;
+            font-weight: 700;
+            color: #555;
+            margin-bottom: 10px;
+        }
+
+        .texto p {
+            font-size: 17px;
+            color: #666;
+            margin-bottom: 10px;
+
+        }
+
+        .imagem-advogado {
+            width: 250px;
+            height: 500px;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+        }
+
+        .imagem-advogado img {
+            width: 100%;
+            height: 50%;
+            border-radius: 50%;
+            border: 3px solid #3e3e3e;
+            object-fit: cover; /* Faz a imagem preencher o círculo */
+            margin-top: 50px;
+        }
+
+        .botao-entre-contato {
+            display: inline-block;
+            padding: 15px 30px;
+            background-color: #202020;
+            color: #fff;
+            text-decoration: none;
+            font-size: 1em;
+            border-radius: 50px;
+            transition: background-color 0.3s;
+            position: relative;
+            top: -50px;
+            margin-bottom: 20px;
+            transform: -50% -50%;
+        }
+
+        .botao-entre-contato:hover {
+            background-color: #5a5a5a;
+        }
+
+        /* RESPONSIVIDADE DO S I T E */
+
+
+        @media (max-width:1020px){
+
+            /* Exibe o botão de menu em telas menores */
+            .checkbtn {
+                display: block;
+                font-size: 30px;
+                color: white;
+                position: absolute;
+                right: 20px;
+                top: 1px;
+                cursor: pointer;
+            }
+            /* ... */
+
+
+            .nav-menu {
+                display: block;
+                width: 100%;
+                text-align: center;
+            }
+
+
+            /* Estiliza o menu de navegação */
+            .nav-menu ul {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                min-height: 100%;
+                background: #202020;
+                top: 80px;
+                left: -100%;
+                text-align: center;
+                transition: all 0.5s;
+                border-top: 1px solid #5a5a5a;
+                z-index: 10;
+                display: flex;
+                flex-direction: column; /* Adiciona esta linha */
+                align-items: center; /* Adiciona esta linha para centralizar os itens */
+                justify-content: center;
+            }
+            /* ... */
+
+              /* Ajusta a posição dos itens do menu para cima */
+            .nav-menu ul li {
+                transform: translateY(-50px);
+            }
+        
+
+            /* Estiliza os itens do menu */
+            .nav-menu ul li {
+                display: block; /* Garante que os itens fiquem em bloco */
+                margin: 10px 20px; /* Ajusta o espaçamento entre os itens */
+                line-height: 30px;
+            }
+            /* ... */
+        
+
+            /* Estiliza os links dentro dos itens do menu */
+            .nav-menu ul li a {
+                font-size: 20px;
+                display: block; /* Garante que os links ocupem a largura total dos itens */
+                padding: 10px 20px; /* Adiciona um pouco de padding para facilitar o clique */
+            }
+            /* ... */
+        
+
+             /* Estiliza o efeito ao passar o mouse ou quando o link está ativo */
+             .nav-menu ul li a:hover, .nav-menu ul li a.active {
+                background: none;
+                color: #5a5a5a;
+            }
+            /* ... */
+        
+
+            /* Exibe o menu quando o checkbox é marcado */
+            #check:checked ~ .nav-menu ul {
+                left: 0;
+            }
+            /* ... */
+
+            .botao:hover {
+                background-color: #5a5a5a;
+                color: #fff;
+            }
+        }
+
+
+        @media (min-width:1020px) {
+
+            /* Oculta o botão de menu em telas maiores */
+            label.checkbtn {
+                display: none;
+            }
+            /* ... */
+        }
+
+
+        @media (max-width:1036px) {
+
+             /* Ajusta o estilo do elemento de navegação */
+            nav {
+                width: 100%;
+                padding: 0 50px;
+            }
+            /* ... */
+        }
+
